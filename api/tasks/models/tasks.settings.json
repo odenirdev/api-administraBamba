@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "tasks"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 280
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "status": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "creator": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tasks_created"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "tasks",
+      "dominant": true
+    },
+    "board": {
+      "model": "boards",
+      "via": "tasks"
+    }
+  }
+}

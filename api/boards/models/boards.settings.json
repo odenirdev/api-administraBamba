@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boards",
+  "info": {
+    "name": "boards"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 280
+    },
+    "users": {
+      "via": "boards_contributing",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "creator": {
+      "via": "boards_created",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "tasks": {
+      "via": "board",
+      "collection": "tasks"
+    }
+  }
+}

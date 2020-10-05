@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "name": "School"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "maxLength": 280
+    },
+    "telephone": {
+      "type": "string",
+      "required": false,
+      "maxLength": 14
+    },
+    "cellphone": {
+      "type": "string",
+      "required": false,
+      "maxLength": 16
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "image": {
+      "type": "json"
+    },
+    "state": {
+      "type": "string",
+      "required": true,
+      "maxLength": 2
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "neighborhood": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "number": {
+      "type": "integer",
+      "required": true
+    },
+    "complement": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "cep": {
+      "type": "string",
+      "required": true,
+      "maxLength": 9
+    },
+    "foundationDate": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
