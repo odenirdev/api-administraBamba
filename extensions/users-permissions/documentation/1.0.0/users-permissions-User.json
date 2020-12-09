@@ -1347,7 +1347,8 @@
               "required": [
                 "id",
                 "title",
-                "status"
+                "status",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -1375,6 +1376,12 @@
                   }
                 },
                 "board": {
+                  "type": "string"
+                },
+                "position": {
+                  "type": "integer"
+                },
+                "event": {
                   "type": "string"
                 },
                 "created_by": {
@@ -1392,7 +1399,8 @@
               "required": [
                 "id",
                 "title",
-                "status"
+                "status",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -1421,6 +1429,67 @@
                 },
                 "board": {
                   "type": "string"
+                },
+                "position": {
+                  "type": "integer"
+                },
+                "event": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "isAllDay",
+                "startTime",
+                "subject"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "endTime": {
+                  "type": "datetime"
+                },
+                "isAllDay": {
+                  "type": "boolean"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "recurrenceRule": {
+                  "type": "string"
+                },
+                "startTime": {
+                  "type": "datetime"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "boolean"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "isReadOnly": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -1583,6 +1652,12 @@
             }
           },
           "tasks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
             "type": "array",
             "items": {
               "type": "string"

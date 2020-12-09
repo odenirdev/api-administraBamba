@@ -77,6 +77,10 @@
     "tasks": {
       "via": "users",
       "collection": "tasks"
+    },
+    "events": {
+      "via": "users",
+      "collection": "events"
     }
   }
 }

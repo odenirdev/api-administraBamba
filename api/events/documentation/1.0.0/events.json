@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/boards": {
+    "/events": {
       "get": {
         "deprecated": false,
-        "description": "Find all the boards's records",
+        "description": "Find all the events's records",
         "responses": {
           "200": {
-            "description": "Retrieve boards document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Boards"
+                    "$ref": "#/components/schemas/Events"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new boards record",
+        "description": "Create a new events record",
         "responses": {
           "200": {
-            "description": "Retrieve boards document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Boards"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBoards"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
         }
       }
     },
-    "/boards/count": {
+    "/events/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of boards documents",
+        "description": "Retrieve the numver of events documents",
         "responses": {
           "200": {
-            "description": "Retrieve boards document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "parameters": []
       }
     },
-    "/boards/{id}": {
+    "/events/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one boards record",
+        "description": "Find one events record",
         "responses": {
           "200": {
-            "description": "Retrieve boards document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Boards"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single boards record",
+        "description": "Update a single events record",
         "responses": {
           "200": {
-            "description": "Retrieve boards document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Boards"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBoards"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single boards record",
+        "description": "Delete a single events record",
         "responses": {
           "200": {
-            "description": "deletes a single boards based on the ID supplied",
+            "description": "deletes a single events based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Boards"
+          "Events"
         ],
         "parameters": [
           {
@@ -514,22 +514,43 @@
   },
   "components": {
     "schemas": {
-      "Boards": {
+      "Events": {
         "required": [
           "id",
-          "title"
+          "isAllDay",
+          "startTime",
+          "subject"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string",
-            "maxLength": 30
-          },
           "description": {
             "type": "string",
             "maxLength": 280
+          },
+          "endTime": {
+            "type": "datetime"
+          },
+          "isAllDay": {
+            "type": "boolean",
+            "default": true
+          },
+          "location": {
+            "type": "string"
+          },
+          "recurrenceRule": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "datetime"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
           },
           "users": {
             "type": "array",
@@ -613,136 +634,9 @@
               }
             }
           },
-          "creator": {
-            "required": [
-              "id",
-              "username",
-              "email",
-              "image"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "image": {
-                "type": "object"
-              },
-              "deleted": {
-                "type": "boolean"
-              },
-              "boards_contributing": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "boards_created": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "tasks_created": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "tasks": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "events": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "tasks": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "status",
-                "position"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "dueDate": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "creator": {
-                  "type": "string"
-                },
-                "users": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "board": {
-                  "type": "string"
-                },
-                "position": {
-                  "type": "integer"
-                },
-                "event": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "isReadOnly": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "required": [
@@ -834,18 +728,39 @@
           }
         }
       },
-      "NewBoards": {
+      "NewEvents": {
         "required": [
-          "title"
+          "isAllDay",
+          "startTime",
+          "subject"
         ],
         "properties": {
-          "title": {
-            "type": "string",
-            "maxLength": 30
-          },
           "description": {
             "type": "string",
             "maxLength": 280
+          },
+          "endTime": {
+            "type": "datetime"
+          },
+          "isAllDay": {
+            "type": "boolean",
+            "default": true
+          },
+          "location": {
+            "type": "string"
+          },
+          "recurrenceRule": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "datetime"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
           },
           "users": {
             "type": "array",
@@ -853,14 +768,9 @@
               "type": "string"
             }
           },
-          "creator": {
-            "type": "string"
-          },
-          "tasks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "isReadOnly": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"
@@ -874,7 +784,7 @@
   },
   "tags": [
     {
-      "name": "Boards"
+      "name": "Events"
     }
   ]
 }

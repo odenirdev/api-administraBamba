@@ -40,6 +40,13 @@
     "board": {
       "model": "boards",
       "via": "tasks"
+    },
+    "position": {
+      "type": "integer",
+      "required": true
+    },
+    "event": {
+      "model": "events"
     }
   }
 }

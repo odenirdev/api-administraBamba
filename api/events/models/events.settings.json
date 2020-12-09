@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "events"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext",
+      "maxLength": 280
+    },
+    "endTime": {
+      "type": "datetime"
+    },
+    "isAllDay": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "recurrenceRule": {
+      "type": "text"
+    },
+    "startTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "events",
+      "dominant": true
+    },
+    "isReadOnly": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}
