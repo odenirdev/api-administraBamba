@@ -58,10 +58,6 @@
       "required": true,
       "private": false
     },
-    "deleted": {
-      "type": "boolean",
-      "default": false
-    },
     "boards_contributing": {
       "collection": "boards",
       "via": "users"
@@ -79,8 +75,8 @@
       "collection": "tasks"
     },
     "events": {
-      "via": "users",
-      "collection": "events"
+      "collection": "events",
+      "via": "users"
     }
   }
 }

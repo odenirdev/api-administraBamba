@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_movements",
+  "info": {
+    "name": "inventoryMovement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "type": "boolean",
+      "required": true
+    },
+    "asset": {
+      "model": "assets",
+      "via": "inventory_movements"
+    },
+    "quantity": {
+      "type": "decimal",
+      "required": true
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "createdAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "inventory_movements_logs": {
+      "via": "inventory_movement",
+      "collection": "inventory-movements-logs"
+    },
+    "assets_contribution": {
+      "via": "inventory_movement",
+      "model": "assets-contribution"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "name": "assets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "json"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "category": {
+      "model": "category",
+      "via": "assets"
+    },
+    "unit_of_measurement": {
+      "model": "unit-of-measurement",
+      "via": "assets"
+    },
+    "assets_contributions": {
+      "via": "asset",
+      "collection": "assets-contribution"
+    },
+    "inventory_movements": {
+      "via": "asset",
+      "collection": "inventory-movement"
+    }
+  }
+}

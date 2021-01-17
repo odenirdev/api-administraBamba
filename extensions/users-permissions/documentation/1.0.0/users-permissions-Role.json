@@ -562,9 +562,6 @@
                 "image": {
                   "type": "object"
                 },
-                "deleted": {
-                  "type": "boolean"
-                },
                 "boards_contributing": {
                   "type": "array",
                   "items": {

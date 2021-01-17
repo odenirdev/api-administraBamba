@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wallet-logs",
+      "handler": "wallet-logs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wallet-logs/count",
+      "handler": "wallet-logs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wallet-logs/:id",
+      "handler": "wallet-logs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/wallet-logs",
+      "handler": "wallet-logs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wallet-logs/:id",
+      "handler": "wallet-logs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wallet-logs/:id",
+      "handler": "wallet-logs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

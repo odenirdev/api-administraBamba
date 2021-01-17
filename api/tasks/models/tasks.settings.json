@@ -47,6 +47,18 @@
     },
     "event": {
       "model": "events"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "wallet": {
+      "model": "wallet",
+      "via": "task"
+    },
+    "assets_contributions": {
+      "via": "task",
+      "collection": "assets-contribution"
     }
   }
 }
