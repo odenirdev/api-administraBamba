@@ -1255,10 +1255,6 @@
           "image": {
             "type": "object"
           },
-          "deleted": {
-            "type": "boolean",
-            "default": false
-          },
           "boards_contributing": {
             "type": "array",
             "items": {
@@ -1290,6 +1286,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "deleted": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -1331,6 +1330,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "deleted": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -1384,6 +1386,18 @@
                 "event": {
                   "type": "string"
                 },
+                "deleted": {
+                  "type": "boolean"
+                },
+                "wallet": {
+                  "type": "string"
+                },
+                "assets_contributions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1435,6 +1449,18 @@
                 },
                 "event": {
                   "type": "string"
+                },
+                "deleted": {
+                  "type": "boolean"
+                },
+                "wallet": {
+                  "type": "string"
+                },
+                "assets_contributions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -1628,10 +1654,6 @@
           },
           "image": {
             "type": "object"
-          },
-          "deleted": {
-            "type": "boolean",
-            "default": false
           },
           "boards_contributing": {
             "type": "array",

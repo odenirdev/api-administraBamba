@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets_contributions",
+  "info": {
+    "name": "assetsContribution"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "asset": {
+      "model": "assets",
+      "via": "assets_contributions"
+    },
+    "task": {
+      "model": "tasks",
+      "via": "assets_contributions"
+    },
+    "quantity": {
+      "type": "decimal"
+    },
+    "createdAt": {
+      "type": "datetime"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "inventory_movement": {
+      "model": "inventory-movement",
+      "via": "assets_contribution"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_of_measurements",
+  "info": {
+    "name": " unitOfMeasurement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "assets": {
+      "via": "unit_of_measurement",
+      "collection": "assets"
+    },
+    "abbr": {
+      "type": "string"
+    }
+  }
+}

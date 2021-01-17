@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/assets-contributions",
+      "handler": "assets-contribution.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assets-contributions/count",
+      "handler": "assets-contribution.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assets-contributions/:id",
+      "handler": "assets-contribution.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/assets-contributions",
+      "handler": "assets-contribution.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/assets-contributions/:id",
+      "handler": "assets-contribution.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/assets-contributions/:id",
+      "handler": "assets-contribution.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -571,9 +571,6 @@
                 "image": {
                   "type": "object"
                 },
-                "deleted": {
-                  "type": "boolean"
-                },
                 "boards_contributing": {
                   "type": "array",
                   "items": {
@@ -650,9 +647,6 @@
               },
               "image": {
                 "type": "object"
-              },
-              "deleted": {
-                "type": "boolean"
               },
               "boards_contributing": {
                 "type": "array",
@@ -735,6 +729,18 @@
                 "event": {
                   "type": "string"
                 },
+                "deleted": {
+                  "type": "boolean"
+                },
+                "wallet": {
+                  "type": "string"
+                },
+                "assets_contributions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -743,6 +749,10 @@
                 }
               }
             }
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "required": [
@@ -861,6 +871,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

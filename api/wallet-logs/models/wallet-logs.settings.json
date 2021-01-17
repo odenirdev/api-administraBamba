@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallet_logs",
+  "info": {
+    "name": "walletLogs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "createdAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "wallet": {
+      "via": "wallet_logs",
+      "model": "wallet"
+    }
+  }
+}

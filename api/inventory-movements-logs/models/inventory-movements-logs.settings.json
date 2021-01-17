@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_movements_logs",
+  "info": {
+    "name": "inventoryMovementsLogs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "inventory_movement": {
+      "model": "inventory-movement",
+      "via": "inventory_movements_logs"
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "createdAt": {
+      "type": "datetime"
+    }
+  }
+}

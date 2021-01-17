@@ -32,6 +32,10 @@
     "tasks": {
       "via": "board",
       "collection": "tasks"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

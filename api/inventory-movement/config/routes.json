@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/inventory-movements",
+      "handler": "inventory-movement.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inventory-movements/count",
+      "handler": "inventory-movement.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inventory-movements/:id",
+      "handler": "inventory-movement.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/inventory-movements",
+      "handler": "inventory-movement.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/inventory-movements/:id",
+      "handler": "inventory-movement.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/inventory-movements/:id",
+      "handler": "inventory-movement.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

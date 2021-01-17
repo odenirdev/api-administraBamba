@@ -578,9 +578,6 @@
               "image": {
                 "type": "object"
               },
-              "deleted": {
-                "type": "boolean"
-              },
               "boards_contributing": {
                 "type": "array",
                 "items": {
@@ -659,9 +656,6 @@
                 "image": {
                   "type": "object"
                 },
-                "deleted": {
-                  "type": "boolean"
-                },
                 "boards_contributing": {
                   "type": "array",
                   "items": {
@@ -731,6 +725,9 @@
                   "type": "string"
                 }
               },
+              "deleted": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -791,6 +788,97 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
+          },
+          "wallet": {
+            "required": [
+              "id",
+              "price",
+              "createdAt",
+              "reason",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "createdAt": {
+                "type": "datetime"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "createdBy": {
+                "type": "string"
+              },
+              "type": {
+                "type": "integer"
+              },
+              "deleted": {
+                "type": "boolean"
+              },
+              "wallet_logs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "task": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "assets_contributions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "asset": {
+                  "type": "string"
+                },
+                "task": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "number"
+                },
+                "createdAt": {
+                  "type": "datetime"
+                },
+                "createdBy": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "boolean"
+                },
+                "inventory_movement": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -923,6 +1011,19 @@
           },
           "event": {
             "type": "string"
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false
+          },
+          "wallet": {
+            "type": "string"
+          },
+          "assets_contributions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
