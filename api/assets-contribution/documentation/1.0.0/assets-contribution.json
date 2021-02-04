@@ -587,7 +587,8 @@
               "id",
               "title",
               "status",
-              "position"
+              "position",
+              "createdAt"
             ],
             "properties": {
               "id": {
@@ -597,9 +598,6 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
-              },
-              "dueDate": {
                 "type": "string"
               },
               "status": {
@@ -634,6 +632,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "dueDate": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"

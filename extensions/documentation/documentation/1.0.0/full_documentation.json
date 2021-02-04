@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/17/2021 12:26:48 PM"
+    "x-generation-date": "02/02/2021 10:33:11 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8403,7 +8403,8 @@
               "id",
               "title",
               "status",
-              "position"
+              "position",
+              "createdAt"
             ],
             "properties": {
               "id": {
@@ -8413,9 +8414,6 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
-              },
-              "dueDate": {
                 "type": "string"
               },
               "status": {
@@ -8450,6 +8448,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "dueDate": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -9198,7 +9202,8 @@
                 "id",
                 "title",
                 "status",
-                "position"
+                "position",
+                "createdAt"
               ],
               "properties": {
                 "id": {
@@ -9208,9 +9213,6 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "string"
-                },
-                "dueDate": {
                   "type": "string"
                 },
                 "status": {
@@ -9245,6 +9247,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "dueDate": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -10674,7 +10682,8 @@
           "id",
           "title",
           "status",
-          "position"
+          "position",
+          "createdAt"
         ],
         "properties": {
           "id": {
@@ -10687,9 +10696,6 @@
           "description": {
             "type": "string",
             "maxLength": 280
-          },
-          "dueDate": {
-            "type": "string"
           },
           "status": {
             "type": "integer",
@@ -11037,6 +11043,12 @@
               }
             }
           },
+          "createdAt": {
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -11131,7 +11143,8 @@
         "required": [
           "title",
           "status",
-          "position"
+          "position",
+          "createdAt"
         ],
         "properties": {
           "title": {
@@ -11141,9 +11154,6 @@
           "description": {
             "type": "string",
             "maxLength": 280
-          },
-          "dueDate": {
-            "type": "string"
           },
           "status": {
             "type": "integer",
@@ -11179,6 +11189,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -11773,7 +11789,8 @@
               "id",
               "title",
               "status",
-              "position"
+              "position",
+              "createdAt"
             ],
             "properties": {
               "id": {
@@ -11783,9 +11800,6 @@
                 "type": "string"
               },
               "description": {
-                "type": "string"
-              },
-              "dueDate": {
                 "type": "string"
               },
               "status": {
@@ -11820,6 +11834,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "dueDate": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -12393,7 +12413,8 @@
                 "id",
                 "title",
                 "status",
-                "position"
+                "position",
+                "createdAt"
               ],
               "properties": {
                 "id": {
@@ -12403,9 +12424,6 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "string"
-                },
-                "dueDate": {
                   "type": "string"
                 },
                 "status": {
@@ -12440,6 +12458,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "dueDate": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -12457,7 +12481,8 @@
                 "id",
                 "title",
                 "status",
-                "position"
+                "position",
+                "createdAt"
               ],
               "properties": {
                 "id": {
@@ -12467,9 +12492,6 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "string"
-                },
-                "dueDate": {
                   "type": "string"
                 },
                 "status": {
@@ -12504,6 +12526,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "dueDate": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
