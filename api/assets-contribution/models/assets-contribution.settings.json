@@ -14,8 +14,8 @@
       "via": "assets_contributions"
     },
     "task": {
-      "model": "tasks",
-      "via": "assets_contributions"
+      "via": "assets_contributions",
+      "model": "tasks"
     },
     "quantity": {
       "type": "decimal"
